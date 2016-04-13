@@ -1,4 +1,10 @@
-# Personal Academic Website
+---
+title: "Home"
+summary: "About this page."
+date: 2016-04-13
+layout: default
+---
+
 A skeleton-site for a personal academic website, written in Jekyll for hosting with GitHub Pages.
 
 ## Features
@@ -57,11 +63,11 @@ Notes:
 ```
 education:
   - years: 2013-2015
-    name: Master’s Degree
+    name: Masterâ€™s Degree
     location: University
     description: Includes qualitative and quantitative methods.
   - years: 2010-2013
-    name: Bachelor’s Degree
+    name: Bachelorâ€™s Degree
     location: University
     description: Includes statistics and maths.
 ```
@@ -69,9 +75,9 @@ education:
 To add other list-elements, edit `_layouts/cv.html`, and duplicate the blocks of code including a for-loop, changing the variable (`page.variable`) in:
 
 ```
-{% for item in page.experience %}
+{% raw %}{% for item in page.experience %}
 	Various HTML code...
-{% endfor %}
+{% endfor %}{% endraw %}
 ```
 
 To whatever you name the list.
