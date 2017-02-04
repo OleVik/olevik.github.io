@@ -1,0 +1,38 @@
+<small>
+  Written on the 
+  <time datetime="{{ page.date | date: '%c' }}">
+	{% assign d = page.date | date: "%-d" %}
+	{% case d %}
+	  {% when '1' or '21' or '31' %}{{ d }}st
+	  {% when '2' or '22' %}{{ d }}nd
+	  {% when '3' or '23' %}{{ d }}rd
+	  {% else %}{{ d }}th
+	{% endcase %}
+	 of {{ page.date | date: "%B, %Y" }}.
+  </time>
+  {% if page.updated %}
+	Updated on the 
+  <time datetime="{{ page.updated | date: '%c' }}">
+	{% assign d = page.updated | date: "%-d" %}
+	{% case d %}
+	  {% when '1' or '21' or '31' %}{{ d }}st
+	  {% when '2' or '22' %}{{ d }}nd
+	  {% when '3' or '23' %}{{ d }}rd
+	  {% else %}{{ d }}th
+	{% endcase %}
+	 of {{ page.updated | date: "%B, %Y" }}.
+  </time>
+  {% elsif page.modified %}
+	Updated on the 
+  <time datetime="{{ page.updated | date: '%c' }}">
+	{% assign d = page.modified | date: "%-d" %}
+	{% case d %}
+	  {% when '1' or '21' or '31' %}{{ d }}st
+	  {% when '2' or '22' %}{{ d }}nd
+	  {% when '3' or '23' %}{{ d }}rd
+	  {% else %}{{ d }}th
+	{% endcase %}
+	 of {{ page.modified | date: "%B, %Y" }}.
+  </time>
+  {% endif %}
+</small>

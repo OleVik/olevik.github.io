@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body>
+    {% assign experience = page.experience %}
+    <main class="container">
+      <div class="row">
+		<div class="jumbotron">
+		  <h1 class="display-4">Portfolio</h1>
+		  <p class="lead">{{ page.content }}</p>
+		</div>
+      </div>
+      {% for item in experience %}
+        {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+        {% if thecycle == 'odd' %}
+        <div class="row card-group">
+          <div class="card left">
+            <img src="{{ item.image }}" class="card-img-top img-fluid" alt="{{ item.name }}">
+          </div>
+          <div class="card">
+			<div class="card-block">
+              <h3 class="card-title">
+                <a href="{{ item.anchor }}">
+                  {{ item.name }}
+                </a>
+              </h3>
+              <p class="card-text">{{ item.description | markdownify }}</p>
+			</div>
+          </div>
+        </div>
+        {% else %}
+        <div class="row card-group">
+          <div class="card">
+			<div class="card-block">
+              <h3 class="card-title">
+                <a href="{{ item.anchor }}">
+                  {{ item.name }}
+                </a>
+              </h3>
+              <p class="card-text">{{ item.description | markdownify }}</p>
+			</div>
+          </div>
+          <div class="card right">
+            <img src="{{ item.image }}" class="card-img-top img-fluid" alt="{{ item.name }}">
+          </div>
+        </div>
+        {% endif %}
+      {% endfor %}
+    </main>
+    <footer>
+      {% include footer.html %}
+    </footer>
+  </body>
+</html>
