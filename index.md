@@ -18,6 +18,10 @@ experience:
     anchor: "http://olevik.github.io/personal-academic-website/"
     image: images/personal_academic_website.jpg
     description: A skeleton-site for a personal academic website, written in Jekyll for hosting with GitHub Pages, with a fully responsive design. Made during my time working at the Norwegian School of Economics, for the professor I worked for.
+  - name: Applications Analysis
+    anchor: "https://olevik.github.io/ApplicationsAnalysis/"
+    image: images/applicationsanalysis.png
+    description: A quantitative analysis on raw data from [job applications](http://olevik.me/applications), designed to run through [Jupyter/IPython](http://jupyter.org/) and output SVG files. Written mostly in Python 3, tested in Python 3.5.2 through Jupyter 4.1.1.
   - name: Grav
     anchor: "https://getgrav.org/"
     image: images/getgrav.org.jpg

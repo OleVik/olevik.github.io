@@ -18,26 +18,26 @@
             <img src="{{ item.image }}" class="card-img-top img-fluid" alt="{{ item.name }}">
           </div>
           <div class="card">
-			<div class="card-block">
+			<div class="card-block text-justify">
               <h3 class="card-title">
                 <a href="{{ item.anchor }}">
                   {{ item.name }}
                 </a>
               </h3>
-              <p class="card-text">{{ item.description | markdownify }}</p>
+              {{ item.description | markdownify }}
 			</div>
           </div>
         </div>
         {% else %}
         <div class="row card-group">
           <div class="card">
-			<div class="card-block">
+			<div class="card-block text-justify">
               <h3 class="card-title">
                 <a href="{{ item.anchor }}">
                   {{ item.name }}
                 </a>
               </h3>
-              <p class="card-text">{{ item.description | markdownify }}</p>
+              {{ item.description | markdownify }}
 			</div>
           </div>
           <div class="card right">
